@@ -1,4 +1,4 @@
-package com.always.geek.scala.arraysorter
+package com.always.geek.arraysorter
 
 import util.Random
 
@@ -11,16 +11,20 @@ import util.Random
  */
 object ArraySorter {
 
+    val arrayLength: Int = 10
+
     def main(args: Array[String]) {
         val rand: Random = new Random;
+        val array: Array[Int] = new Array[Int](arrayLength)
 
-        for (i <- 1 to 100) {
-            println(rand.nextInt(100))
+        for (i <- 0 to arrayLength - 1) {
+            array(i) = rand.nextInt(100)
         }
     }
 
     def bubbleSort(array: Array[Int]): Array[Int] = {
-        array
+        array.foreach()
+        array.map
     }
 
     def selectionSort(array: Array[Int]): Array[Int] = {
@@ -32,6 +36,7 @@ object ArraySorter {
     }
 
     def displayArray(array: Array[Int]): Unit = {
-
+        array.foreach(i => print(i + " "))
+        println()
     }
 }
